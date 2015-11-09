@@ -1,0 +1,33 @@
+{
+  "name": "flattery",
+  "version": "1.0.0",
+  "description": "Flattens an array of nested arrays into a list of numbers",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudiopro/flattery.git"
+  },
+  "keywords": [
+    "array",
+    "recursion",
+    "npm",
+    "flatten"
+  ],
+  "author": "Claudio Procida",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/claudiopro/flattery/issues"
+  },
+  "homepage": "https://github.com/claudiopro/flattery#readme",
+  "devDependencies": {
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-cli": "^0.1.1",
+    "karma-commonjs": "0.0.13",
+    "karma-jasmine": "^0.3.6"
+  }
+}
