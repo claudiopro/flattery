@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/claudiopro/flattery.svg?branch=master)](https://travis-ci.org/claudiopro/flattery)
+
 # flattery
 
 Flattens an array of nested arrays into a list of numbers
@@ -15,7 +17,7 @@ Use in your Node scripts like this
 ```js
 const flattery = require('flattery');
 
-var flattened = flattery([[1, 2, [3]], 4]); // -> [1,2,3,4]
+var flattened = flattery([[1, 2, [3]], 4]); // -> [1, 2, 3, 4]
 ```
 
 # License
