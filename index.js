@@ -8,7 +8,8 @@
  * @returns A flattened representation of array_in
  */
 function flattery(array_in, deep) {
-  if (!array_in.length) {
+  // Check if the object is array-like
+  if (array_in.length === undefined) {
     if (!deep) {
       // We can't accept a scalar value at top level
       throw 'You must pass in an array!';
