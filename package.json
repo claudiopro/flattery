@@ -1,6 +1,6 @@
 {
   "name": "flattery",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Flattens an array of nested arrays into a list of numbers",
   "main": "index.js",
   "scripts": {
