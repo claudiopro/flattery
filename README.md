@@ -2,7 +2,7 @@
 
 # flattery
 
-Flattens an array of nested arrays into a list of numbers
+Flattens an array of nested arrays into a list of scalar elements
 
 # Instructions
 
