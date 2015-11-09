@@ -4,6 +4,14 @@ Flattens an array of nested arrays into a list of numbers
 
 # Instructions
 
+Install via `npm`:
+
+```bash
+npm install flattery --save
+```
+
+Use in your Node scripts like this
+
 ```js
 const flattery = require('flattery');
 
