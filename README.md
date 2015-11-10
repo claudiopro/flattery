@@ -12,7 +12,7 @@ Install via `npm`:
 npm install flattery --save
 ```
 
-Use in your Node scripts like this
+Use in your Node scripts like this:
 
 ```js
 const flattery = require('flattery');
@@ -23,3 +23,5 @@ var flattened = flattery([[1, 2, [3]], 4]); // -> [1, 2, 3, 4]
 # License
 
 [MIT](http://opensource.org/licenses/MIT)
+
+Copyright (c) Claudio Procida 2015
