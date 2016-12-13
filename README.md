@@ -24,4 +24,4 @@ var flattened = flattery([[1, 2, [3]], 4]); // -> [1, 2, 3, 4]
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) Claudio Procida 2015
+Copyright (c) Claudio Procida 2015-2016
