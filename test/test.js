@@ -27,4 +27,10 @@ describe('the flattery util', function() {
     expect(function(){flattery([1, [2]])}).not.toThrow();
     expect(function(){flattery([1, [2, 3]])}).not.toThrow();
   });
+
+  it('works well on strings', function() {
+    expect(flattery([23, 'foo', [34, 1], [['bar', [12]]]])).toEqual([23, 'foo', 34, 1, 'bar', 12]);
+    expect(flattery([23, ['foo', [34, 1]], [['bar', [12]]]])).toEqual([23, 'foo', 34, 1, 'bar', 12]);
+    expect(flattery([[23], ['foo'], [34, [1]], [['bar', [12]]]])).toEqual([23, 'foo', 34, 1, 'bar', 12]);
+  });
 });

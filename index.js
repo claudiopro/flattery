@@ -3,27 +3,37 @@
  * Flattens an array of arbitrarily nested arrays of integers into a flat array
  * of integers. e.g. [[1,2,[3]],4] -> [1,2,3,4].
  *
- * @param {Array} array_in An array of arbitrarily nested arrays of integers
+ * New non-recursive implementation for low stack footprint
+ *
+ * @param {Array} arr An array of arbitrarily nested arrays of integers
  * @param {Boolean} [deep] Set to true to allow passing in a scalar
- * @returns A flattened representation of array_in
+ * @returns A flattened representation of arr
  */
-function flattery(array_in, deep) {
-  // Check if the object is array-like
-  if (array_in.length === undefined) {
-    if (!deep) {
-      // We can't accept a scalar value at top level
-      throw 'You must pass in an array!';
+function flattery(arr, deep) {
+  if (!(arr instanceof Array) && !deep) {
+    throw 'You must pass in an array!';
+  }
+
+  var stack = [arr],
+    flat = [];
+
+  while (stack.length) {
+    var curr = stack.pop();
+
+    while (curr && curr.length) {
+      var  el = curr.shift();
+
+      if (el instanceof Array) {
+        stack.push(curr);
+        curr = el;
+        continue;
+      }
+
+      flat.push(el);
     }
-    // Return an array with a single element
-    return [array_in];
   }
-  var buf = [];
-  for (var i = 0; i < array_in.length; i++) {
-    // Recurse on the i-th element
-    // Use Array.prototype.push.apply() to alter buf in place
-    Array.prototype.push.apply(buf, flattery(array_in[i], true));
-  }
-  return buf;
+
+  return flat;
 }
 
 module.exports = flattery;
